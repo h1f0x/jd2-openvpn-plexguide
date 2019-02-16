@@ -55,7 +55,7 @@
           - '/mnt:/mnt'
           - '{{path.stdout}}/downloads/{{pgrole}}/:/output:rw'
           - '/etc/localtime:/etc/localtime:ro'
-          - '/opt/appdata/{{pgrole}}/vpn:/vpn:ro'
+          - '/opt/appdata/{{pgrole}}/vpn:/vpn:rw'
 
     - name: 'Setting PG ENV'
       set_fact:
