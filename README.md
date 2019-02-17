@@ -16,6 +16,15 @@ IMPORTANT: You are not able to run jDownloader2 and jDownloader2+OpenVPN at the 
 tbd -> not yet added
 
 # Post-Installation Tasks
+1. Prepare config.ovpn:
+   1. add the following lines to your custom OpenVPN config
+
+
+    script-security 2
+    up /etc/openvpn/up.sh
+    down /etc/openvpn/down.sh
+
+    # Example of an ExpressVPN configuration in ./example/example.config.ovpn
 1. Copy & past your vpn config to /opt/appdata/jd2-openvpn/vpn/config.ovpn
    1. IMPORTANT: the vpn configuration needs to be named: config.ovpn
    2. if you have user-pass-auth:
