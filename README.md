@@ -19,13 +19,15 @@ tbd -> not yet added
 1. Prepare config.ovpn:
    1. add the following lines to your custom OpenVPN config
 
-
+     ```
     script-security 2
     up /etc/openvpn/up.sh
     down /etc/openvpn/down.sh
+    
+    Example of an ExpressVPN configuration in ./example/example.config.ovpn
+    ```
 
-    # Example of an ExpressVPN configuration in ./example/example.config.ovpn
-1. Copy & past your vpn config to /opt/appdata/jd2-openvpn/vpn/config.ovpn
+2. Copy & past your vpn config to /opt/appdata/jd2-openvpn/vpn/config.ovpn
    1. IMPORTANT: the vpn configuration needs to be named: config.ovpn
    2. if you have user-pass-auth:
         1. add the line "auth-user-pass vpn.auth" to your config.ovpn
@@ -33,11 +35,12 @@ tbd -> not yet added
         3. add the username on the first line
         4. add the password on the second line
 
-2. Wait about 2 minutes for the cron to kick in and reconnect you to your vpn!
-3. You can access your new jDownloader like the non vpn one and configure it to you r needs.
+3. Wait about 2 minutes for the cron to kick in and reconnect you to your vpn!
+4. You can access your new jDownloader like the non vpn one and configure it to you r needs.
 
 # Trivia
 You can verify your current external ip address by checking the logfile at:
-
-    cat /opt/appdata/jd2-openvpn/vpn/current_external_ip.txt
+```
+cat /opt/appdata/jd2-openvpn/vpn/current_external_ip.txt
+```
     

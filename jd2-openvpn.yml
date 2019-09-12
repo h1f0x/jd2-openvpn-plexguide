@@ -53,7 +53,8 @@
           - '{{path.stdout}}:{{path.stdout}}'
           - '/mnt/unionfs:/unionfs'
           - '/mnt:/mnt'
-          - '{{path.stdout}}/downloads/{{pgrole}}/:/output:rw'
+          - '{{path.stdout}}/incomplete/{{pgrole}}/:/output:rw'
+          - '{{path.stdout}}/downloads/{{pgrole}}/extracted/:/output/extracted:rw'
           - '/etc/localtime:/etc/localtime:ro'
           - '/opt/appdata/{{pgrole}}/vpn:/vpn:rw'
 
